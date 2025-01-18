@@ -8,8 +8,7 @@ use eyre::Result;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    let url = reqwest::Url::parse("http://127.0.0.1:8545")?;
-    let provider: RootProvider<_> = ProviderBuilder::new().on_http(url).boxed();
+    let provider = ProviderBuilder::new().on_builtin("http://127.0.0.1:8545").await?;
 
     let address = "0x0000000000000000000000000000000000000000".parse::<Address>()?;
 
