@@ -1,3 +1,6 @@
 cache/
 out/
 broadcast/
+target/
+
+compiled/*.wasm

@@ -19,4 +19,9 @@ forge script ./script/WavsServiceManager.s.sol --rpc-url http://localhost:8545 -
 
 Custom component
 ```bash
+(cd components/eth-trigger-echo; cargo component build --release)
+
+# TODO: I do not like this output name. Can't use `out` (solidity) or `components`.
+mkdir -p ./compiled
+cp ./components/target/wasm32-wasip1/release/*.wasm ./compiled/
 ```
