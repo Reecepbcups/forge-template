@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "components/eth-trigger-echo",
+    "crates/app",
+    "crates/bindings",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.2.0-rc1"
+authors = ["Lay3r Labs Team"]
+rust-version = "1.80.0"
+repository = "https://github.com/Lay3rLabs/wavs"
+
+workspace.resolver = "1"
+
+[workspace.dependencies]
+bindings = { path = "crates/bindings" }
+alloy = { version = "0.6.4", features = ["sol-types", "contract"] }
+wit-bindgen-rt = { version = "0.32.0", features = ["bitflags"] }
