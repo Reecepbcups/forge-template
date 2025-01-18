@@ -4,3 +4,5 @@ broadcast/
 target/
 
 compiled/*.wasm
+.docker
+wavs-cli.toml
