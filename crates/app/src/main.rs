@@ -1,6 +1,6 @@
 use alloy::{
     primitives::Address,
-    providers::{Provider, ProviderBuilder, RootProvider},
+    providers::{Provider, ProviderBuilder},
     transports::http::reqwest,
 };
 use bindings::wavsservicemanager::WavsServiceManager;
